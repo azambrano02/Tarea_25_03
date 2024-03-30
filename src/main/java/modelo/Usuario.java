@@ -50,22 +50,6 @@ public abstract class Usuario {
 		this.prestamo = prestamo;
 	}
 
-	public RecursoDigital buscarRecursoTitulo(String titulo) {
-		throw new UnsupportedOperationException();
-	}
-	public List<RecursoDigital> buscarRecursoAutor(String autor) {
-		throw new UnsupportedOperationException();
-	}
-	public RecursoDigital buscarRecursoAño(int año) {
-		throw new UnsupportedOperationException();
-	}
-	public List<RecursoDigital> buscarRecursoClasificacion(String tematica) {
-		throw new UnsupportedOperationException();
-	}
-	public Prestamo realizarPrestamo() {
-		throw new UnsupportedOperationException();
-	}
-
 	public Usuario(String nombre, String direccion, String preferencias, int rut, int numTelfono, Prestamo prestamo) {
 		this.nombre = nombre;
 		this.direccion = direccion;

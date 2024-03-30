@@ -4,6 +4,8 @@ public class RecursoDigital {
 	protected String autor;
 	protected int año;
 	protected String tematica;
+
+	protected String privilegio;
 	private Prestamo prestamo;
 
 	public String getTitulo() {
@@ -30,11 +32,37 @@ public class RecursoDigital {
 		this.año = año;
 	}
 
+	public String getPrivilegio() {
+		return privilegio;
+	}
+
+	public void setPrivilegio(String privilegio) {
+		this.privilegio = privilegio;
+	}
+
 	public String getTematica() {
 		return this.tematica;
 	}
 
 	public void setTematica(String tematica) {
 		this.tematica = tematica;
+	}
+	public Prestamo getPrestamo() {
+		return prestamo;
+	}
+	public void setPrestamo(Prestamo prestamo) {
+		this.prestamo = prestamo;
+	}
+
+	public RecursoDigital(String titulo, String autor, int año, String tematica, Prestamo prestamo, String privilegio) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.año = año;
+		this.tematica = tematica;
+		this.prestamo = prestamo;
+		this.privilegio = privilegio;
+	}
+	public String toString() {
+		return "Título: " + this.titulo;
 	}
 }

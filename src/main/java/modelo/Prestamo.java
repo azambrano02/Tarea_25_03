@@ -1,6 +1,7 @@
 package modelo;
 import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Prestamo {
 	private LocalDate fechaInicio;
@@ -34,14 +35,15 @@ public class Prestamo {
 		this.recursos = recursos;
 	}
 
-	public Prestamo(LocalDate fechaInicio, LocalDate fechaFin, Usuario usuario, ArrayList<RecursoDigital> recursos) {
+	public Prestamo(LocalDate fechaInicio, LocalDate fechaFin, Usuario usuario, List<RecursoDigital> recursos) {
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.usuario = usuario;
 		this.recursos = new ArrayList<>();
 	}
-	public void extenderPlazo() {
-		throw new UnsupportedOperationException();
+	public void aplazarPlazo(int dias) {
+		LocalDate fechaActual = LocalDate.now();
+        this.fechaFin = this.fechaFin.plusDays(dias);
 	}
 
 }
